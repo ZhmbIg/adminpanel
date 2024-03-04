@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+</head>
+<style>
+    body{
+    .form_button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #0071f0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  caret-color: transparent;
+  display: block;
+  }
+}
+</style>
+
+<body>
+
+  <p>Ban user</p>
+   <form action="/admin" method="post">
+    <input type="text" name="username" placeholder="username">
+    <button class="btn">Ban user</button>
+   </form>
+
+   <p>Change user's password</p>
+   <form action="/changePass" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="changePass" placeholder="new password">
+    <button class="btn2">Change password</button>
+   </form>
+
+   <p>Create new user</p>
+   <form action="/createUser" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button class="btn3">Create new user</button>
+   </form>
+
+   <p>Change admin password</p>
+   <form action="/changeAdminPass" method="post">
+    <input type="password" name="prevPass" placeholder="previous password">
+    <input type="password" name="newPass" placeholder="new password">
+    <button class="btn4">Change admin password</button>
+   </form>
+
+   <p></p>
+   <form action="/hashJson" method="post">
+    <input type="password" name="hashpass" id="hashpass">
+    <button class="btn5">Hash json</button>
+   </form>
+
+   <p></p>
+   <form action="/unhashJson" method="post">
+    <button class="btn6">Unhash json</button>
+   </form>
+  <p></p>
+
+   <form action="/quit" method="post">
+    <button id="btn7" class="form_button">quit</button>
+   </form>
+
+</body>
+</html>
